@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance</title>
+    <link rel="stylesheet" href="balanceStyle.css">
+    <script src="balanceBack.js" type="module"></script>
+</head>
+<body>
+ 
+    <video autoplay muted loop id="video-background">
+        <source src="https://cdn.pixabay.com/video/2020/07/30/45959-447087605_large.mp4" type="video/mp4">
+    </video>
+
+    <!-- Barra lateral -->
+    <div class="sidebar" id="sidebar">
+        <div class="ellipsis-container">
+            <span class="ellipsis"></span>
+            <span class="ellipsis"></span>
+            <span class="ellipsis"></span>
+        </div>
+        <h2>Balance</h2>
+        <ul>
+            <li><a href="#" onclick="navigateToHome()">Home</a></li>
+            <li><a href="#" onclick="navigateToMindfulness()">Mindfulness</a></li>
+            <li><a href="#" onclick="navigateToKindnessAct()">Daily Kindness Act</a></li>
+            <li><a href="#" onclick="navigateToBabyTv()">Baby TV</a></li>
+            <li><a href="#" onclick="navigateToSupportLine()">Support Line</a></li>
+            <li><a href="#" onclick="navigateToDarkSide()">Change Sides</a></li>
+
+
+            <script>
+                function navigateToDarkSide() {
+                    window.location.href = "/pageSide/badSide/balanceBadSide.html";
+                }
+            </script>
+            <script>
+                function navigateToBabyTv() {
+                    window.location.href = "/tvChannels/babyTv/babyTv.html";
+                }
+            </script>
+             <script>
+                function navigateToHome() {
+                    window.location.href = "/initView/init.html";
+                }
+            </script> 
+        <p>Software Version 7.0</p>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+        <h1>The Light Side</h1>
+        <div class="container-wrapper">
+            <div class="container">
+                <a href="#" onclick="navigateToMindfulness()">
+                    <h3>Mindfulness</h3>
+                    <img src="https://tse2.mm.bing.net/th/id/OIG2.iFeYdwCtWFNSrU6.soDv?pid=ImgGn" alt="Mindfulness Image">
+                </a>
+            </div>
+            <div class="container">
+                <a href="#" onclick="navigateToKindnessAct()">
+                    <h3>Daily Kindness Act</h3>
+                    <img src="https://tse4.mm.bing.net/th/id/OIG3.HoRTCRbm1Lrhu3qrW7Ci?pid=ImgGn" alt="Random Acts of Kindness Image">
+                </a>
+            </div>
+        </div>
+    </div>
+    <canvas id="starCanvas"></canvas>
+
+    <script>
+        // JavaScript to handle button click event and hide/show button
+        document.getElementById("change-sides").addEventListener("click", function() {
+            document.getElementById("sidebar").classList.toggle("change-sides");
+        });
+        
+        // Navigation functions
+        function navigateToMindfulness() {
+            window.location.href = "/videosView/goodVideos.html";
+        }
+        
+        function navigateToKindnessAct() {
+            window.location.href = "/randomActs/kind/kind-acts.html";
+        }
+        
+        function navigateToBabyTv() {
+            window.location.href = "/tvChannels/babyTv/babyTv.html";
+        }
+        
+        function navigateToDarkSide() {
+            window.location.href = "/pageSide/badSide/balanceBadSide.html";
+        }
+
+        function navigateToSupportLine() {
+        window.open("https://eportugal.gov.pt/en-GB/cidadaos-europeus-viajar-viver-e-fazer-negocios-em-portugal/cuidados-de-saude-em-portugal/contactos-de-emergencia-em-portugal", "_blank");
+        }
+    </script>
+</body>
+</html>
+
+

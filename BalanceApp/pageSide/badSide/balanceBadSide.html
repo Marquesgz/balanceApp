@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance</title>
+    <link rel="stylesheet" href="balanceBadSideStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+</head>
+<body>
+ 
+    <video autoplay muted loop id="video-background">
+        <source src="https://cdn.pixabay.com/video/2020/05/24/40034-424911925_large.mp4" type="video/mp4">
+    </video>
+
+    <!-- Barra lateral -->
+    <div class="sidebar" id="sidebar">
+        <div class="ellipsis-container">
+            <span class="ellipsis"></span>
+            <span class="ellipsis"></span>
+            <span class="ellipsis"></span>
+        </div>
+        <h2>Balance</h2>
+        <ul>
+            <li><a href="#" onclick="navigateToHome()">Home</a></li>
+            <li><a href="#" onclick="navigateToFuckfulness()">F*ckfulness</a></li>
+            <li><a href="#" onclick="navigateToToxicAct()">Daily Toxic Act</a></li>
+            <li><a href="#" onclick="navigateToAdultTv()">Adult TV</a></li>
+            <li><a href="#" onclick="navigateToDarkSide()">The Dark Side is Here</a></li>
+            <li><a href="#" onclick="navigateToPeace()">Change Sides</a></li> 
+            <script>
+                function navigateToPeace() {
+                    window.location.href = "/pageSide/goodSide/balance.html";
+                }
+            </script>
+            <script>
+                function navigateToAdultTv() {
+                    window.location.href = "/tvChannels/ufcTv/ufcTv.html";
+                }
+            </script>
+             <script>
+                function navigateToHome() {
+                    window.location.href = "/initView/init.html";
+                }
+            </script>
+        </ul>
+        <p>Software Version 7.0</p>
+       
+    </div>
+
+    <div class="content">
+        <h1>The Dark Side</h1>
+        <div class="container-wrapper">
+            <div class="container" onclick="navigateToFuckfulness()">
+                <h3>F*ckfulness</h3>
+                <img src="https://i.postimg.cc/dVZmps71/Untitled-1-1.png" alt="Mindfulness Image">
+            </div>
+            <div class="container" onclick="navigateToToxicAct()">
+                <h3>Daily Toxic Act</h3>
+                <img src="https://cdn.gencraft.com/prod/user/37169b2a-f95e-4594-9410-6fb7cd4b9d7d/921383c2-8d29-42ba-87f8-2bc1536a9b28/image/image0_0.jpg?Expires=1713478416&Signature=oC1iIePH--vpKUnHXD3LA4uLJ7fP5NQuyQHKv5RykeAdfk3~GJRxrB3pKpt4IgPuM-xHbXJ-MO766S6FjbU8nq4iF4u64dnjTwSeJi1EDQcYCpqU~YVuFYjp~4piSNh0zuNVjEGbOwlYklErlveqaZpFWgHK3oOCWQqS53OpfkY-rGjLvCRsbynKKp28fg8iFGOk7YVkD7Nuj9YU0TENobDmbPmEZI0FBerQcNdPphfV5WK3IlLhB6tPfkaDVV9ATYA8KqTUXJ6in0DT~HejX1bYvSeIpQPCIIByPUC9Y8GTxwj6bRwhFOvjAfh7kROP-Kjg0YEecVGjNFhostZeqA__&Key-Pair-Id=K3RDDB1TZ8BHT8" alt="Random Acts of Kindness Image">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle button click event and hide/show button
+        document.getElementById("change-sides").addEventListener("click", function() {
+            document.getElementById("sidebar").classList.toggle("change-sides");
+        });
+
+        // Function to navigate to F*ckfulness page
+        function navigateToFuckfulness() {
+            window.location.href = "/videosView/badVideos.html";
+        }
+
+        // Function to navigate to Daily Toxic Act page
+        function navigateToToxicAct() {
+            window.location.href = "/randomActs/toxic/toxic-acts.html";
+        }
+
+        function navigateToPeace() {
+        window.location.href = "/pageSide/goodSide/balance.html";
+        }
+
+        function navigateToDarkSide() {
+        window.open("https://www.imdb.com/title/tt1105711/", "_blank");
+        }
+    </script>
+      <canvas id="canvas"></canvas>
+      <script  src="./balanceBadSide.js"></script>
+</body>
+</html>

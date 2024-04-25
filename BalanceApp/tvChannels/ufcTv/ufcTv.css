@@ -1,0 +1,93 @@
+/* Conteúdo do arquivo styles.css */
+body, html {
+    height: 100%; /* Faz o corpo e o html terem altura total da janela */
+    margin: 0; /* Remove a margem padrão */
+    display: flex; /* Usa Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
+  button {
+    all: unset;
+    background-color: var(-);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border: 1px solid var(--red);
+    box-shadow: 0 0 4px var(--red-shadow);
+    cursor: pointer;
+    perspective: 1000px;
+    position: relative;
+    overflow: hidden;
+    transform: translateX(-50%);
+    z-index: 9999;
+    padding: 1px 100px;
+    color: white;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+  }
+  @keyframes pulse {
+    50% {
+      transform: scale(1.5);
+    }
+  }
+
+  [anim="pulse"]:not(.toggled) {
+    animation: pulse var(--ease-elastic-in-1) 1500ms infinite;
+  }
+
+  [anim="sheen"]::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: var(--red-sheen);
+    transform: rotateZ(60deg) translate(-5em, 7.5em);
+  }
+  
+  :root {
+    --black: hsl(0, 0%, 13%);
+    --dark: hsl(12, 32%, 2%);
+    --gray: hsl(0, 0%, 70%);
+    --white: hsl(0, 0%, 96%);
+    --red: hsl(12, 90%, 63%);
+    --red-shadow: hsl(12, 100%, 60%);
+    --red-sheen: linear-gradient(
+      to bottom,
+      hsl(12, 90%, 43%),
+      hsla(12, 40%, 70%, 0.5) 50%,
+      hsl(12, 93%, 23%)
+    );
+  }
+  * {
+    font-family: inherit;
+    box-sizing: border-box;
+  }
+  
+  .blurry {
+    position: relative;
+    transform-style: preserve-3d;
+  }
+  
+  .blurry::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    transform: translate3d(0px, 0px, -1px);
+    background: var(--red-shadow);
+    filter: blur(6px);
+  }
