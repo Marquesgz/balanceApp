@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="toxic-acts.css">
+    
+</head>
+<body>
+    <button anim="pulse" onclick="navigateToDarkSide()"><h2>Back</h2></button>
+    <script>
+        function navigateToDarkSide() {
+            window.location.href = "/pageSide/badSide/balanceBadSide.html";
+        }
+    </script>
+    <canvas id="canvas"></canvas>
+    
+
+    <video autoplay muted loop id="video-background">
+        <source src="https://cdn.pixabay.com/video/2024/02/15/200715-913538373_large.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container-fluid">
+        <div class="row">    
+          <span class="generate"><img src="https://static.vecteezy.com/system/resources/previews/024/029/664/non_2x/floating-white-fire-ball-with-transparent-background-free-png.png" alt=""></span>
+      
+          <div class="quote">Press above to see your daily toxic act</div>   
+      </div>
+
+      <script src ="toxic-acts.js" defer></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</body>
+</html> 
+

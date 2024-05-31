@@ -1,0 +1,214 @@
+@import "https://unpkg.com/open-props@1.6.17/easings.min.css";
+
+body {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+}
+
+.column1 {
+  position: relative;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+#video-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-overlay {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1; 
+}
+
+.button-container {
+  margin-bottom: 20px;
+}
+
+button {
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.column2 {
+    position: relative;
+    color: white; 
+}
+
+
+#video-background {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+#videoTwo-background {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+  
+  @keyframes pulse {
+    50% {
+      transform: scale(1.5);
+    }
+  }
+
+  [anim="pulse"]:not(.toggled) {
+    animation: pulse var(--ease-elastic-in-1) 950ms infinite alternate;
+  }
+
+  [anim="sheen"]::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: var(--red-sheen);
+    transform: rotateZ(60deg) translate(-5em, 7.5em);
+  }
+  
+  :root {
+    --black: hsl(0, 0%, 13%);
+    --dark: hsl(12, 32%, 2%);
+    --gray: hsl(0, 0%, 70%);
+    --white: hsl(0, 0%, 96%);
+    --red: hsl(12, 90%, 63%);
+    --red-shadow: hsl(12, 100%, 60%);
+    --red-sheen: linear-gradient(
+      to bottom,
+      hsl(12, 90%, 43%),
+      hsla(12, 40%, 70%, 0.5) 50%,
+      hsl(12, 93%, 23%)
+    );
+  }
+  * {
+    font-family: inherit;
+    box-sizing: border-box;
+  }
+  
+  button {
+    all: unset;
+    background-color: var(-);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border: 1px solid var(--red);
+    box-shadow: 0 0 4px var(--red-shadow);
+    cursor: pointer;
+    perspective: 1000px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .blurry {
+    position: relative;
+    transform-style: preserve-3d;
+  }
+  
+  .blurry::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    transform: translate3d(0px, 0px, -1px);
+    background: var(--red-shadow);
+    filter: blur(6px);
+  }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+
+
+a {
+  border-bottom: 2px solid #fff;
+  padding: 10px 0;
+  margin-top: 25px;
+}
+
+.cursor {
+  pointer-events: none;
+}
+
+.cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  z-index: 1000;
+}
+
+.cursor__ball circle {
+  fill: #f7f8fa;
+}
+
+.left,
+.right {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  background: #fff;
+}
+
+.right a {
+  border-bottom: 2px solid #000;
+}
+
+.right h1,
+.right p,
+.right a {
+  color: #000;
+}
+
+
+
+#mouse-trail {
+  background: #fff;
+  background: linear-gradient(-90deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 100%);
+  border-radius: 100%;
+  width: 110px; /* Valor fixo em substituição à variável $trail-size */
+  height: 110px; /* Valor fixo em substituição à variável $trail-size */
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  /* transition: top 350ms, left 350ms; */
+}

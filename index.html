@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="init.js"></script>
+    <link rel="stylesheet" href="initStyle.css">
+</head>
+<body>
+    
+      <div class="clock off">
+        <div class="shadow"></div>
+    
+        <div class="base-container"><div class="base"><div></div></div></div>
+        <div class="small-outer-pipe">
+          <div class="small-inner-pipe"></div>
+        </div>
+        <div class="outer-pipe">
+          <div class="inner-pipe"></div>
+        </div>
+        <div class="pipe-accents">
+          <div class="top-tube"></div>
+          <div class="tube-holders">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="top"></div>
+          <div class="topinset"></div>
+          <div class="left"><div></div><div></div><div></div></div>
+          <div class="right"><div></div><div></div><div></div></div>
+          <div class="bottom-left"></div>
+          <div class="bottom-right"></div>
+        </div>
+    
+        <div class="display">
+            <div class="row">
+                <div class="col"><div>BA</div><div id="char61"> BA</div><div id="char62">BA</div></div>
+              </div>
+            <div class="row">
+                <div class="col"><div>LA</div><div id="char61">LA</div><div id="char62">LA</div></div>
+              </div>
+            <div class="row">
+                <div class="col"><div>NC</div><div id="char61">NC</div><div id="char62">NC</div></div>
+              </div>
+            <div class="row">
+                <div class="col"><div>E!!!</div><div id="char61">E!!!</div><div id="char62">E!!!</div></div>
+              </div>
+        </div>
+    
+        <div class="glass-tube"></div>
+        <div class="hex">
+          <div class="overlay"></div>
+        </div>
+    
+        <div class="tube-base-container">
+          <div class="tube-base"></div>
+          <div class="rods">
+            <div class="left-rod"></div>
+            <div class="center-rod"></div>
+            <div class="right-rod"></div>
+          </div>
+          <div class="tube-btm"></div>
+        </div>
+    
+        <div class="button" onclick="toggleClock()">
+          <div></div>
+        </div>
+        
+        <script>
+          function toggleClock() {
+            const clock = document.querySelector('.clock');
+            if (clock) {
+              clock.classList.toggle('off');
+            }
+            
+            toggleNavigate();
+          }
+        
+          function toggleNavigate() {
+            setTimeout(() => {
+              window.location.href = "/homeView/secondHome.html";
+            }, 3000); 
+          }
+        </script>
+        
+            <div></div>
+          </div>
+        </div> 
+      </div>
+      
+</body>
+</html>
